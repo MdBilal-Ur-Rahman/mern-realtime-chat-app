@@ -1,3 +1,115 @@
+
+client/
+│
+├── public/
+│   ├── favicon.ico
+│   └── logo.png
+│
+├── src/
+│
+│   ├── assets/
+│   │   ├── images/
+│   │   ├── icons/
+│   │   ├── svg/
+│   │   └── sounds/
+│   │
+│   ├── components/
+│   │   │
+│   │   ├── common/
+│   │   │   ├── Avatar.jsx
+│   │   │   ├── Button.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Loader.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   └── Spinner.jsx
+│   │   │
+│   │   ├── layout/
+│   │   │   ├── MainLayout.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Sidebar.jsx
+│   │   │   └── MobileSidebar.jsx
+│   │   │
+│   │   ├── sidebar/
+│   │   │   ├── ChatItem.jsx
+│   │   │   ├── ChatList.jsx
+│   │   │   ├── SearchBar.jsx
+│   │   │   └── UserCard.jsx
+│   │   │
+│   │   ├── chat/
+│   │   │   ├── ChatHeader.jsx
+│   │   │   ├── ChatBody.jsx
+│   │   │   ├── MessageBubble.jsx
+│   │   │   ├── MessageInput.jsx
+│   │   │   ├── TypingIndicator.jsx
+│   │   │   └── MessageStatus.jsx
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── LoginForm.jsx
+│   │   │   ├── RegisterForm.jsx
+│   │   │   └── ProtectedRoute.jsx
+│   │   │
+│   │   └── ui/
+│   │       ├── Badge.jsx
+│   │       ├── EmptyState.jsx
+│   │       ├── Toast.jsx
+│   │       ├── Skeleton.jsx
+│   │       └── ThemeToggle.jsx
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.jsx
+│   │   ├── Profile.jsx
+│   │   ├── Settings.jsx
+│   │   └── NotFound.jsx
+│   │
+│   ├── hooks/
+│   │   ├── useAuth.js
+│   │   ├── useChat.js
+│   │   ├── useSocket.js
+│   │   ├── useTheme.js
+│   │   └── useDebounce.js
+│   │
+│   ├── context/
+│   │   ├── AuthContext.jsx
+│   │   ├── ChatContext.jsx
+│   │   ├── SocketContext.jsx
+│   │   └── ThemeContext.jsx
+│   │
+│   ├── services/
+│   │   ├── api.js
+│   │   ├── authApi.js
+│   │   ├── chatApi.js
+│   │   ├── messageApi.js
+│   │   ├── userApi.js
+│   │   └── socket.js
+│   │
+│   ├── routes/
+│   │   ├── AppRoutes.jsx
+│   │   ├── PrivateRoute.jsx
+│   │   └── PublicRoute.jsx
+│   │
+│   ├── utils/
+│   │   ├── constants.js
+│   │   ├── formatDate.js
+│   │   ├── helpers.js
+│   │   ├── storage.js
+│   │   └── validators.js
+│   │
+│   ├── styles/
+│   │   ├── globals.css
+│   │   └── variables.css
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── package.json
+├── vite.config.js
+└── README.md
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
