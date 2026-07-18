@@ -1,4 +1,4 @@
-import { FiMenu } from "react-icons/fi";
+import { FiMenu, FiPhone, FiVideo, FiMoreVertical } from "react-icons/fi";
 
 const ChatHeader = ({
   selectedChat,
@@ -7,7 +7,7 @@ const ChatHeader = ({
   if (!selectedChat) return null;
 
   return (
-    <div className="flex items-center justify-between border-b border-slate-700 bg-[#111827] p-4">
+    <div className="flex items-center justify-between border-b border-slate-700 bg-[#111827] px-5 py-4">
       <div className="flex items-center gap-3">
         <button
           onClick={() => setShowSidebar(true)}
@@ -36,9 +36,23 @@ const ChatHeader = ({
           >
             {selectedChat.online
               ? "Online"
-              : "Offline"}
+              : "Last seen recently"}
           </p>
         </div>
+      </div>
+
+      <div className="flex items-center gap-3">
+        <button className="rounded-lg p-2 text-gray-400 transition hover:bg-slate-700 hover:text-white">
+          <FiPhone size={18} />
+        </button>
+
+        <button className="rounded-lg p-2 text-gray-400 transition hover:bg-slate-700 hover:text-white">
+          <FiVideo size={18} />
+        </button>
+
+        <button className="rounded-lg p-2 text-gray-400 transition hover:bg-slate-700 hover:text-white">
+          <FiMoreVertical size={18} />
+        </button>
       </div>
     </div>
   );
