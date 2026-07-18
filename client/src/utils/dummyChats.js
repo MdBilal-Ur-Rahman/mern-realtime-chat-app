@@ -15,6 +15,7 @@ const dummyChats = [
     time: "09:45 AM",
     online: false,
     unread: 0,
+     
     avatar: "https://i.pravatar.cc/150?img=10",
   },
   {
