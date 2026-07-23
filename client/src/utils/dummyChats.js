@@ -2,7 +2,7 @@ const dummyChats = [
   {
     id: 1,
     name: "Ali Ahmed",
-    message: "Hey! How are you?",
+    message: "Hey Bilal! Are we meeting today?",
     time: "10:30 AM",
     online: true,
     unread: 2,
@@ -15,13 +15,12 @@ const dummyChats = [
     time: "09:45 AM",
     online: false,
     unread: 0,
-     
     avatar: "https://i.pravatar.cc/150?img=10",
   },
   {
     id: 3,
     name: "John Smith",
-    message: "Let's start the meeting.",
+    message: "Meeting starts in 10 minutes.",
     time: "Yesterday",
     online: true,
     unread: 5,
@@ -30,11 +29,29 @@ const dummyChats = [
   {
     id: 4,
     name: "Ayesha",
-    message: "Thanks ❤️",
+    message: "Thank you ❤️",
     time: "Monday",
     online: false,
     unread: 0,
     avatar: "https://i.pravatar.cc/150?img=20",
+  },
+  {
+    id: 5,
+    name: "Ahmed Raza",
+    message: "Can you send the files?",
+    time: "Sunday",
+    online: true,
+    unread: 1,
+    avatar: "https://i.pravatar.cc/150?img=32",
+  },
+  {
+    id: 6,
+    name: "Fatima Noor",
+    message: "Good Night 🌙",
+    time: "Saturday",
+    online: false,
+    unread: 0,
+    avatar: "https://i.pravatar.cc/150?img=47",
   },
 ];
 

@@ -10,9 +10,16 @@ import NotFound from "../pages/NotFound";
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
 
-      <Route path="/login" element={<Login />} />
+      <Route
+        path="/"
+        element={<Home />}
+      />
+
+      <Route
+        path="/login"
+        element={<Login />}
+      />
 
       <Route
         path="/register"
@@ -33,6 +40,7 @@ const AppRoutes = () => {
         path="*"
         element={<NotFound />}
       />
+
     </Routes>
   );
 };

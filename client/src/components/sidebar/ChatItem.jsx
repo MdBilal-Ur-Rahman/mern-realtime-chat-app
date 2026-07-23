@@ -1,6 +1,6 @@
 const ChatItem = ({
   chat,
- selected,
+  selected,
   onSelect,
   setShowSidebar,
 }) => {
@@ -15,45 +15,44 @@ const ChatItem = ({
   return (
     <div
       onClick={handleClick}
-      className={`group flex cursor-pointer items-center gap-3 border-b border-slate-800 p-4 transition-all duration-300
-      ${
+      className={`group mx-3 my-2 flex cursor-pointer items-center gap-4 rounded-2xl border px-4 py-3 transition-all duration-300 ${
         selected
-          ? "bg-cyan-500/15 border-l-4 border-l-cyan-400"
-          : "hover:bg-slate-800/80"
+          ? "border-cyan-400/30 bg-cyan-500/15 shadow-lg shadow-cyan-500/10"
+          : "border-transparent hover:border-white/10 hover:bg-white/5"
       }`}
     >
       {/* Avatar */}
-      <div className="relative">
+      <div className="relative flex-shrink-0">
         <img
           src={chat.avatar}
           alt={chat.name}
-          className="h-12 w-12 rounded-full object-cover ring-2 ring-transparent transition-all group-hover:ring-cyan-400"
+          className="h-14 w-14 rounded-full object-cover ring-2 ring-transparent transition-all duration-300 group-hover:ring-cyan-500"
         />
 
         {chat.online && (
-          <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-[#111827] bg-green-500"></span>
+          <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full border-2 border-[#0f172a] bg-green-500"></span>
         )}
       </div>
 
       {/* Chat Info */}
-      <div className="flex-1 overflow-hidden">
-        <div className="flex items-center justify-between">
-          <h3 className="truncate font-semibold text-white">
+      <div className="min-w-0 flex-1">
+        <div className="flex items-center justify-between gap-2">
+          <h3 className="truncate text-[17px] font-semibold text-white">
             {chat.name}
           </h3>
 
-          <span className="text-xs text-gray-500">
+          <span className="flex-shrink-0 text-xs font-medium text-gray-500">
             {chat.time}
           </span>
         </div>
 
-        <div className="mt-1 flex items-center justify-between">
+        <div className="mt-1 flex items-center justify-between gap-3">
           <p className="truncate text-sm text-gray-400">
             {chat.message}
           </p>
 
           {chat.unread > 0 && (
-            <span className="ml-2 flex h-6 min-w-6 items-center justify-center rounded-full bg-cyan-500 px-2 text-xs font-bold text-white">
+            <span className="ml-2 flex h-6 min-w-6 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-2 text-xs font-bold text-white shadow-lg shadow-cyan-500/30">
               {chat.unread}
             </span>
           )}

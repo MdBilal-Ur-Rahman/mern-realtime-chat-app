@@ -24,7 +24,7 @@ const ChatList = ({
           <ChatItem
             key={chat.id}
             chat={chat}
-            selected={selectedChat.id === chat.id}
+            selected={selectedChat?.id === chat.id}
             onSelect={setSelectedChat}
             setShowSidebar={setShowSidebar}
           />

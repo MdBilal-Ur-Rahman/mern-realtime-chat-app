@@ -3,31 +3,41 @@ import { useState } from "react";
 import MainLayout from "../components/layout/MainLayout";
 import Sidebar from "../components/sidebar/Sidebar";
 import ChatBody from "../components/chat/ChatBody";
+import ProfileDrawer from "../components/profile/ProfileDrawer";
 
 import dummyChats from "../utils/dummyChats";
 
 const Home = () => {
-  const [selectedChat, setSelectedChat] = useState(
-    dummyChats[0]
-  );
+ const [selectedChat, setSelectedChat] = useState(null);
 
   const [showSidebar, setShowSidebar] =
     useState(true);
 
-  return (
-    <MainLayout>
-      <Sidebar
-        showSidebar={showSidebar}
-        setShowSidebar={setShowSidebar}
-        selectedChat={selectedChat}
-        setSelectedChat={setSelectedChat}
-      />
+  const [showProfile, setShowProfile] =
+    useState(false);
 
-      <ChatBody
-        selectedChat={selectedChat}
-        setShowSidebar={setShowSidebar}
+  return (
+    <>
+      <MainLayout>
+        <Sidebar
+          showSidebar={showSidebar}
+          setShowSidebar={setShowSidebar}
+          selectedChat={selectedChat}
+          setSelectedChat={setSelectedChat}
+          setShowProfile={setShowProfile}
+        />
+
+        <ChatBody
+          selectedChat={selectedChat}
+          setShowSidebar={setShowSidebar}
+        />
+      </MainLayout>
+
+      <ProfileDrawer
+        open={showProfile}
+        onClose={() => setShowProfile(false)}
       />
-    </MainLayout>
+    </>
   );
 };
 
